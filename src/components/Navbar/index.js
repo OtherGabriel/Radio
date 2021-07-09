@@ -20,7 +20,7 @@ export function Navbar () {
         </CollectionLink>
 
         <CollectionLink>
-          <Link href="/">gêneros</Link>
+          <Link href="/generos">gêneros</Link>
         </CollectionLink>        
       </CollectionLinks>
     </Room>

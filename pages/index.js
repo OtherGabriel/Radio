@@ -1,12 +1,12 @@
 import { Navbar } from "../src/components/Navbar";
-import { Dashboard } from "../src/components/Dashboard";
+import { Radio } from "../src/components/Radio";
 
 export default function Home () {
   return (
     <>
       <Navbar />
 
-      <Dashboard />
+      <Radio />
     </>
   )
 }

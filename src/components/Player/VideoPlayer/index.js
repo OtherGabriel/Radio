@@ -6,9 +6,11 @@ import { replacer } from "../../../utils/helpers/stringHelper";
 
 export function VideoPlayer () {
   const [ video, setVideo ] = useState("");
+  const [ urlVideo, setUrlVideo ] = useState("");
 
   function handleChange (event) {
-    setVideo(replacer(event.target.value));
+    setVideo(event.target.value);
+    setUrlVideo(replacer(event.target.value));
   }
 
   return (
@@ -17,19 +19,19 @@ export function VideoPlayer () {
         {
           video == ""
           ?
-            <Message>Nenhum vídeo disponível</Message>
+            <Message>Adicione o link de um vídeo</Message>
           :
           <>
             <Message>Vídeo para assistir ou fazer o download</Message>
 
-            <Video link={ video } />
+            <Video link={ urlVideo } />
           </>
         }
       </Grid>
 
       <VideoInput
         type="text"
-        placeholder="ID do seu vídeo no YouTube"
+        placeholder="Link do seu vídeo no YouTube"
         value={ video }
         onChange={ handleChange }
       />
