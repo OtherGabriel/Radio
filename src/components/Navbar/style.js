@@ -2,36 +2,25 @@ import styled from "styled-components";
 
 export const Room = styled.div`
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-between;
 
-  width: 100%;
-  height: 15vh;
+  width: 95%;
 
-  padding-left: 10px;
+  margin: auto;
   margin-bottom: 10px;
 
-  background-color: black;
+  background-color: #a7ff83;
 `;
 
 export const Title = styled.h1`
   color: white;
 `;
 
-export const CollectionLinks = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-
-  border-radius: 5px 0 0 5px;
-
-  width: 40%;
-
-  background-color: white;
-`;
-
-export const CollectionLink = styled.h3`
-  color: black;
+export const MyLink = styled.h2`
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 5px 10px;
+  
+  color: white;
 `;

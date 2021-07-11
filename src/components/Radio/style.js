@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Room = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 
@@ -15,3 +16,5 @@ export const Room = styled.div`
 
   position: relative;
 `;
+
+export const Player = styled.div``;

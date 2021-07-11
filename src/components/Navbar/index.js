@@ -3,26 +3,19 @@ import Link from "next/link";
 import {
   Room,
   Title,
-  CollectionLinks,
-  CollectionLink
+  MyLink
 } from "./style";
 
 export function Navbar () {
   return (
     <Room>
       <Title>
-        <Link href="/">Radio GM</Link>
+        <Link href="/">calm down</Link>
       </Title>
 
-      <CollectionLinks>
-        <CollectionLink>
-          <Link href="/player">player</Link>
-        </CollectionLink>
-
-        <CollectionLink>
-          <Link href="/generos">gêneros</Link>
-        </CollectionLink>        
-      </CollectionLinks>
+      <MyLink>
+        <Link href="/ambient">ambient</Link>
+      </MyLink>
     </Room>
   )
 }
