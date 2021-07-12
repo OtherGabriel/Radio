@@ -1,5 +1,5 @@
-import { Navbar } from "../src/components/Navbar";
-import { Ambient } from "../src/components/Ambient";
+import { Navbar } from "../components/Navbar";
+import { Ambient } from "../components/Ambient";
 
 export default function AmbientPage () {
   return (

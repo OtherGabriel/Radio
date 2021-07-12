@@ -1,5 +1,5 @@
-import { Navbar } from "../src/components/Navbar";
-import { Radio } from "../src/components/Radio/";
+import { Navbar } from "../components/Navbar";
+import { Radio } from "../components/Radio/";
 
 export default function HomePage () {
   return (
