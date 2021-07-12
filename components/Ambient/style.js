@@ -1,7 +1,16 @@
 import styled from "styled-components";
+import { createGlobalStyle } from "styled-components";
+
+export const Body = createGlobalStyle`
+  html,
+  body {
+    background-color: ${ props => props.color };
+  }
+`;
 
 export const Room = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 
@@ -15,4 +24,3 @@ export const Room = styled.div`
 
   position: relative;
 `;
-

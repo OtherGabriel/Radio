@@ -9,8 +9,6 @@ export const Room = styled.div`
 
   margin: auto;
   margin-bottom: 10px;
-
-  background-color: #a7ff83;
 `;
 
 export const Title = styled.h1`

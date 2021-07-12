@@ -1,11 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 
-import { Room, Player } from "./style";
+import { Room } from "./style";
 
 import Image from "next/image";
-
-import playerButton from "../../public/player.png";
-import pauseButton from "../../public/pause.png";
 import gif from "../../public/ambient.gif";
 
 export function Radio () {
@@ -34,28 +31,20 @@ export function Radio () {
 
   return (
     <Room>
-      <Image width = "450" height = "250" src = { gif } />
+      <Image width = "550" height = "290" src = { gif } />
       
-      <Player>
+      <>
         {
           isPlaying ? (
-            <Image
-              onClick={ toggleIsPlaying }
-              src={ pauseButton }
-            />
+            <h2 onClick={ toggleIsPlaying }>stop</h2>
           ) : (
-            <Image
-              width = "100"
-              heigth = "10"
-              onClick={ toggleIsPlaying }
-              src={ playerButton }
-            />
+            <h2 onClick={ toggleIsPlaying }>start</h2>
           )
         }
-      </Player>
+      </>
       
       <audio
-        src = "/song.mp3"
+        src = "/1-song.mp3"
         autoPlay = { true } 
         ref = { audioRef }
         onPlay = { () => setPlayingState(true) }
