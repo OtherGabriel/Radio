@@ -3,22 +3,19 @@ import styled from "styled-components";
 export const Room = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 
-  width: 95%;
+  padding: 10px;
+  position: fixed;
 
-  margin: auto;
+  font-size: 30px;
+  width: 75%;
+
   margin-bottom: 10px;
 `;
 
 export const Title = styled.h1`
-  color: white;
-`;
+  color: #ff63da;
 
-export const MyLink = styled.h2`
-  border: 2px solid white;
-  border-radius: 5px;
-  padding: 5px 10px;
-  
-  color: white;
+  margin: 0;
 `;

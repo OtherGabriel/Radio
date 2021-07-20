@@ -1,9 +1,15 @@
 import styled from "styled-components";
 
-export const MyIframe = styled.iframe`
-  position: absolute;
-  right: 0;
-  bottom: 0;
+export const Button = styled.button`
+  background-color: ${ props => props.background };
+  color: ${ props => props.color };
 
-  display: none;
+  border: 5px;
+  border-radius: 5px;
+
+  padding: 5px;
+
+  font-size: 20px;
+
+  cursor: pointer;
 `;

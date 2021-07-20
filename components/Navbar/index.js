@@ -2,20 +2,15 @@ import Link from "next/link";
 
 import {
   Room,
-  Title,
-  MyLink
+  Title
 } from "./style";
 
 export function Navbar () {
   return (
     <Room>
       <Title>
-        <Link href="/">calm down</Link>
+        <Link href="/">Radio.gm</Link>
       </Title>
-
-      <MyLink>
-        <Link href="/ambient">ambient</Link>
-      </MyLink>
     </Room>
   )
 }
