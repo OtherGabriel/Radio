@@ -1,9 +1,6 @@
 import Link from "next/link";
 
-import {
-  Room,
-  Title
-} from "./style";
+import { Room, Title } from "./style";
 
 export function Navbar () {
   return (

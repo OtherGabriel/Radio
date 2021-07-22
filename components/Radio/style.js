@@ -17,10 +17,9 @@ export const Room = styled.div`
 
 export const CardLibrary = styled.div`
   display: flex;
-  flex-wrap: wrap;
-  flex: 1 0 10%;
-
   position: absolute;
+  flex-flow: row wrap;
+
   left: 0;
   bottom: 0;
 
@@ -36,11 +35,19 @@ export const CardLibrary = styled.div`
 
 export const Card = styled.div`
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
 
-  background-color: black;
+  flex: 0 1 calc(30% - 30px);
 
-  width: 20%;
+  margin: 5px auto;
+  border-radius: 10px;
+
+  padding: 10px;
+
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #ff63da;
 
   cursor: pointer;
 `;
@@ -59,10 +66,45 @@ export const VideoPlaylist = styled.div`
   right: 0;
   bottom: 0;
 
-  background-color: #08247d;
   background-color: rgba(0, 0, 0, 0.7);
 `;
 
 export const Loading = styled.h3`
-  color: white;
+  color: #ff63da;
+`;
+
+export const TitleCard = styled.h3`
+  color: #ff63da;
+  margin: 0;
+`;
+
+export const VideoIframe = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const Divisor = styled.div`
+  width: 100%;
+  height: 1px;
+
+  margin-bottom: 5px;
+
+  background-color: #ff63da;
+`;
+
+export const BottomVideo = styled.div`
+  position: absolute;
+  bottom: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  right: 0;
+  left: 0;
+`;
+
+export const TitleVideo = styled.h4`
+  color: #ff63da;
+  margin: 0;
 `;

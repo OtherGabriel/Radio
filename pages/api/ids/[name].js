@@ -5,7 +5,7 @@ const handler = async (req, res) => {
     return res.json({
       "struct": {
         "id": "PLGxmYc4R8LDcVyiODgz7jMapC1QKVb_Qd",
-        "informations": { "nome": "VMZ", "youtube": "https://youtube/vmz" },
+        "informations": { "name": "VMZ", "youtube": "https://youtube/vmz" },
       }
     })
   } else {

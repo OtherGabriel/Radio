@@ -1,11 +1,37 @@
 const handler = async (req, res) => {
   return res.json({
-    0: {
-      "name": "vmz",
-      "title": "VMZ",
-      "path": "../../public/vmz.png"
-    },
-    1: {}
+    results: [
+      {
+        "name": "vmz",
+        "title": "VMZ",
+        "path": "../../public/vmz.png"
+      },
+      {
+        "name": "vmz",
+        "title": "VMZ",
+        "path": "../../public/vmz.png"
+      },
+      {
+        "name": "vmz",
+        "title": "VMZ",
+        "path": "../../public/vmz.png"
+      },
+      {
+        "name": "vmz",
+        "title": "VMZ",
+        "path": "../../public/vmz.png"
+      },
+      {
+        "name": "vmz",
+        "title": "VMZ",
+        "path": "../../public/vmz.png"
+      },
+      {
+        "name": "vmz",
+        "title": "VMZ",
+        "path": "../../public/vmz.png"
+      }
+    ]
   })
 }
 
