@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import axios from "axios";
 
 import { Room, CardLibrary, Card, VideoPlaylist, Loading, TitleCard, VideoIframe, Divisor, BottomVideo, TitleVideo } from "./style";
@@ -28,9 +29,9 @@ export function Radio () {
     try {
       response = await axios.get(`http://localhost:3000/api/ids/${ author }`)
 
-      setInformations(response.data)
+      setInformations(response.data.struct.informations)
       setPlaylist(`http://www.youtube.com/embed?listType=playlist&list=${ response.data.struct.id }&autoplay=0&controls=0&disablekb=1`)    
-    
+
       setIsLoading(false)
     } catch (error) {
       console.log(error)
@@ -47,10 +48,10 @@ export function Radio () {
       <CardLibrary>
         {
           cards.map((info, index) => (
-            <Card key={ index }>
-              <TitleCard>{ info.name }</TitleCard>
+            <Card onClick={ () => { buildPlaylist(info.name) } } key={ index }>
+              <TitleCard>{ info.title }</TitleCard>
 
-              <img width="200" height="200" src="https://yt3.ggpht.com/u-HfFe694vJkwLG41UDfZOe_tlI0OHw1AGuBzUfgOroFFs1iB_zvzghJL9g5_zTGjaGt3wIjRK3udlI=s640-nd" />
+              <img width="200" height="200" src={ info.path } />
             </Card>
           ))
         }
@@ -71,11 +72,11 @@ export function Radio () {
 
             <Divisor></Divisor>
 
-            <TitleVideo>Name - { informations.name }</TitleVideo>
-            <TitleVideo>YouTube - { informations.youtube }</TitleVideo>
+            <TitleVideo>{ informations.name }</TitleVideo>
+            <TitleVideo><Link href={informations.youtube}>ver mais</Link></TitleVideo>
 
             <BottomVideo>
-              <TitleVideo>OiOiOiOi</TitleVideo>
+              <TitleVideo>X</TitleVideo>
             </BottomVideo>
           </VideoIframe>
         }
