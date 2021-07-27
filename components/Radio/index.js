@@ -30,7 +30,7 @@ export function Radio () {
       response = await axios.get(`http://localhost:3000/api/ids/${ author }`)
 
       setInformations(response.data.struct.informations)
-      setPlaylist(`http://www.youtube.com/embed?listType=playlist&list=${ response.data.struct.id }&autoplay=0&controls=0&disablekb=1`)    
+      setPlaylist(`http://www.youtube.com/embed?listType=playlist&list=${ response.data.struct.id }&autoplay=1&controls=0&disablekb=1`)    
 
       setIsLoading(false)
     } catch (error) {
@@ -76,7 +76,7 @@ export function Radio () {
             <TitleVideo><Link href={informations.youtube}>ver mais</Link></TitleVideo>
 
             <BottomVideo>
-              <TitleVideo>X</TitleVideo>
+              <TitleVideo>o</TitleVideo>
             </BottomVideo>
           </VideoIframe>
         }
