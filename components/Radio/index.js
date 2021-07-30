@@ -2,7 +2,9 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import axios from "axios";
 
-import { Room, CardLibrary, Card, VideoPlaylist, Loading, TitleCard, VideoIframe, Divisor, BottomVideo, TitleVideo } from "./style";
+import {
+  Room, CardLibrary, Card, VideoPlaylist, Loading, TitleCard, VideoIframe, Divisor, Iframe, TitleVideo
+} from "./style";
 
 export function Radio () {
   const [ cards, setCards ] = useState([])
@@ -30,7 +32,7 @@ export function Radio () {
       response = await axios.get(`http://localhost:3000/api/ids/${ author }`)
 
       setInformations(response.data.struct.informations)
-      setPlaylist(`http://www.youtube.com/embed?listType=playlist&list=${ response.data.struct.id }&autoplay=1&controls=0&disablekb=1`)    
+      setPlaylist(`http://www.youtube.com/embed?listType=playlist&list=${ response.data.struct.id }&autoplay=0&controls=0&disablekb=1`)    
 
       setIsLoading(false)
     } catch (error) {
@@ -45,6 +47,25 @@ export function Radio () {
 
   return (
     <Room>
+      <VideoPlaylist>
+        {
+          isLoading ?
+          <Loading>L o a d i n g . . .</Loading> :
+          <VideoIframe>
+            <Iframe
+              src={ playlist }
+              title="YouTube video player"
+              frameBorder="0"
+            />
+
+            <Divisor></Divisor>
+
+            <TitleVideo>{ informations.name }</TitleVideo>
+            <TitleVideo><Link href={informations.youtube}>ver mais</Link></TitleVideo>
+          </VideoIframe>
+        }
+      </VideoPlaylist>
+
       <CardLibrary>
         {
           cards.map((info, index) => (
@@ -56,31 +77,6 @@ export function Radio () {
           ))
         }
       </CardLibrary>
-
-      <VideoPlaylist>
-        {
-          isLoading ?
-          <Loading>L o a d i n g . . .</Loading> :
-          <VideoIframe>
-            <iframe
-              width="250"
-              height="250"
-              src={ playlist }
-              title="YouTube video player"
-              frameBorder="0"
-            />
-
-            <Divisor></Divisor>
-
-            <TitleVideo>{ informations.name }</TitleVideo>
-            <TitleVideo><Link href={informations.youtube}>ver mais</Link></TitleVideo>
-
-            <BottomVideo>
-              <TitleVideo>o</TitleVideo>
-            </BottomVideo>
-          </VideoIframe>
-        }
-      </VideoPlaylist>
     </Room>
   )
 }
