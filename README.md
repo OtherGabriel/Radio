@@ -1,6 +1,6 @@
 ## Alternative Youtube music player
 
-The project was created using NextJS, StyledComponents and Youtube embebed videos. For you
+The project was created using NextJS, StyledComponents and Youtube embebed video. For you
 start application, use:
 
 ```bash
