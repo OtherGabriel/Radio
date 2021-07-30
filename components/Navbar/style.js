@@ -1,21 +1,26 @@
 import styled from "styled-components";
 
 export const Room = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
   padding: 10px;
-  position: fixed;
 
-  font-size: 30px;
-  width: 75%;
+  @media only screen and (max-width: 626px) {
+    height: 20vh;
+    margin-bottom: 10px;
 
-  margin-bottom: 10px;
+    width: 100%;
+  }
+
+  @media only screen and (min-width: 626px) {
+    width: 75%;
+  
+    position: fixed;
+  }
 `;
 
 export const Title = styled.h1`
   color: #ff63da;
+
+  font-size: 3rem;
 
   margin: 0;
 `;

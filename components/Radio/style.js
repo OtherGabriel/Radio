@@ -17,11 +17,7 @@ export const Room = styled.div`
 
 export const CardLibrary = styled.div`
   display: flex;
-  position: absolute;
   flex-flow: row wrap;
-
-  left: 0;
-  bottom: 0;
 
   padding: 10px;
 
@@ -31,6 +27,13 @@ export const CardLibrary = styled.div`
   height: 85vh;
 
   border-radius: 5px;
+
+  @media only screen and (min-width: 626px) {
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+  }
 `;
 
 export const Card = styled.div`
@@ -58,15 +61,24 @@ export const VideoPlaylist = styled.div`
   justify-content: center;
 
   padding-top: 2.5%;
-  position: absolute;
-
-  width: 25%;
-  height: 100vh;
-
-  right: 0;
-  bottom: 0;
 
   background-color: rgba(0, 0, 0, 0.7);
+
+  @media only screen and (max-width: 626px) {
+    width: 100%;
+
+    height: 40vh;
+  }
+
+  @media only screen and (min-width: 626px) {
+    position: fixed;
+
+    right: 0;
+    bottom: 0;
+
+    width: 25%;
+    height: 100vh;
+  }
 `;
 
 export const Loading = styled.h3`
@@ -83,11 +95,16 @@ export const VideoIframe = styled.div`
   flex-direction: column;
 `;
 
+export const Iframe = styled.iframe`
+  margin: 0 auto;
+  width: 90%;
+`;
+
 export const Divisor = styled.div`
   width: 100%;
   height: 1px;
 
-  margin-bottom: 5px;
+  margin: 10px 0;
 
   background-color: #ff63da;
 `;
